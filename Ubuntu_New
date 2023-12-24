@@ -1,0 +1,77 @@
+-- GCC >= 4.9 detected, enabling colored diagnostics
+-- GCC >= 4.9 detected, enabling colored diagnostics
+-- GCC >= 4.9 detected, enabling colored diagnostics
+-- Hiding warnings for target tbb_tbb
+-- Google's ceres-solver not found; MaterialOptimization_cli won't be built
+-- pybind11 v2.6.1
+CMake Warning (dev) at /usr/share/cmake-3.22/Modules/CMakeDependentOption.cmake:84 (message):
+  Policy CMP0127 is not set: cmake_dependent_option() supports full Condition
+  Syntax.  Run "cmake --help-policy CMP0127" for policy details.  Use the
+  cmake_policy command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  ext/elastic_rods/3rdparty/MeshFEM/3rdparty/pybind11/CMakeLists.txt:91 (cmake_dependent_option)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL EGL
+-- Creating target: igl::core (igl)
+-- Creating target: igl::opengl (igl_opengl)
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Creating target: igl::opengl_glfw (igl_opengl_glfw)
+CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Using X11 for window creation
+-- Creating target: igl::opengl_glfw_imgui (igl_opengl_glfw_imgui)
+CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Knitro not found; knitro solvers and dependent binaries disabled
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/siwameron/python_codes/Cshells/build
+(cshell_env) siwameron@MyComputer:~/python_codes/Cshells/build$ ninja
+[1/3] Linking CXX shared module ../ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/python/_offscreen_renderer.cpython-38-x86_64-linux-gnu.so
+FAILED: ../ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/python/_offscreen_renderer.cpython-38-x86_64-linux-gnu.so
+: && /usr/bin/c++ -fPIC -fdiagnostics-color=auto -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=auto -Wall -Wextra -pedantic -Wno-comment -fdiagnostics-color=auto -O3  -flto -shared  -o ../ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/python/_offscreen_renderer.cpython-38-x86_64-linux-gnu.so ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings/CMakeFiles/_offscreen_renderer.dir/offscreen_renderer.cc.o  -Wl,-rpath,/mnt/c/vcpkg/installed/x64-windows/debug/bin  /mnt/c/vcpkg/installed/x64-windows/debug/bin/glew32d.dll  -lopengl32  -lglu32  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libGLU.so  /usr/lib/x86_64-linux-gnu/libEGL.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libpng.so  /usr/lib/x86_64-linux-gnu/libz.so && cd /home/siwameron/python_codes/Cshells/build/ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/python_bindings && /usr/bin/strip /home/siwameron/python_codes/Cshells/ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/python/_offscreen_renderer.cpython-38-x86_64-linux-gnu.so
+/usr/bin/ld: cannot find -lopengl32: No such file or directory
+/usr/bin/ld: cannot find -lglu32: No such file or directory
+collect2: error: ld returned 1 exit status
+[2/3] Linking CXX executable ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/demo_multicontext
+FAILED: ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/demo_multicontext
+: && /usr/bin/c++ -fdiagnostics-color=auto -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=auto -Wall -Wextra -pedantic -Wno-comment -fdiagnostics-color=auto -O3 -rdynamic ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo_multicontext.dir/demo_multicontext.cc.o -o ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/demo_multicontext  -Wl,-rpath,/mnt/c/vcpkg/installed/x64-windows/debug/bin  /mnt/c/vcpkg/installed/x64-windows/debug/bin/glew32d.dll  -lopengl32  -lglu32  -lOpenGL  -lGLX  -lGLU  /usr/lib/x86_64-linux-gnu/libEGL.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libpng.so  /usr/lib/x86_64-linux-gnu/libz.so && :
+/usr/bin/ld: cannot find -lopengl32: No such file or directory
+/usr/bin/ld: cannot find -lglu32: No such file or directory
+collect2: error: ld returned 1 exit status
+[3/3] Linking CXX executable ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/demo
+FAILED: ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/demo
+: && /usr/bin/c++ -fdiagnostics-color=auto -Wall -Wextra -Wpedantic -Wno-comment -fdiagnostics-color=auto -Wall -Wextra -pedantic -Wno-comment -fdiagnostics-color=auto -O3 -rdynamic ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/CMakeFiles/demo.dir/demo.cc.o -o ext/elastic_rods/3rdparty/MeshFEM/3rdparty/OffscreenRenderer/src/OffscreenRenderer/demo  -Wl,-rpath,/mnt/c/vcpkg/installed/x64-windows/debug/bin  /mnt/c/vcpkg/installed/x64-windows/debug/bin/glew32d.dll  -lopengl32  -lglu32  -lOpenGL  -lGLX  -lGLU  /usr/lib/x86_64-linux-gnu/libEGL.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libpng.so  /usr/lib/x86_64-linux-gnu/libz.so && :
+/usr/bin/ld: cannot find -lopengl32: No such file or directory
+/usr/bin/ld: cannot find -lglu32: No such file or directory
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
