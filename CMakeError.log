@@ -1,0 +1,21 @@
+Performing C++ SOURCE FILE Test USE_STD_FILESYSTEM failed with the following output:
+Change Dir: /home/user/Library/openimageio/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_196bc/fast && gmake[1]: Entering directory '/home/user/Library/openimageio/build/CMakeFiles/CMakeTmp'
+/usr/bin/gmake  -f CMakeFiles/cmTC_196bc.dir/build.make CMakeFiles/cmTC_196bc.dir/build
+gmake[2]: Entering directory '/home/user/Library/openimageio/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_196bc.dir/src.cxx.o
+/usr/bin/c++ -DUSE_STD_FILESYSTEM  -std=c++14 -o CMakeFiles/cmTC_196bc.dir/src.cxx.o -c /home/user/Library/openimageio/build/CMakeFiles/CMakeTmp/src.cxx
+/home/user/Library/openimageio/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/user/Library/openimageio/build/CMakeFiles/CMakeTmp/src.cxx:2:25: error: ‘std::filesystem’ has not been declared
+    2 |       int main() { std::filesystem::path p; return 0; }
+      |                         ^~~~~~~~~~
+gmake[2]: *** [CMakeFiles/cmTC_196bc.dir/build.make:78: CMakeFiles/cmTC_196bc.dir/src.cxx.o] Error 1
+gmake[2]: Leaving directory '/home/user/Library/openimageio/build/CMakeFiles/CMakeTmp'
+gmake[1]: *** [Makefile:127: cmTC_196bc/fast] Error 2
+gmake[1]: Leaving directory '/home/user/Library/openimageio/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <filesystem>
+      int main() { std::filesystem::path p; return 0; }
