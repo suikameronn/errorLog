@@ -1,0 +1,18 @@
+fail: Grpc.AspNetCore.Server.ServerCallHandler[6]
+      Error when executing service method 'Connect'.
+      System.IO.InvalidDataException: Unexpected compressed flag value in message header.
+         at Grpc.AspNetCore.Server.Internal.PipeExtensions.TryReadMessage(ReadOnlySequence`1& buffer, HttpContextServerCallContext context, ReadOnlySequence`1& message)
+         at Grpc.AspNetCore.Server.Internal.PipeExtensions.ReadStreamMessageAsync[T](PipeReader input, HttpContextServerCallContext serverCallContext, Func`2 deserializer, CancellationToken cancellationToken)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at Grpc.AspNetCore.Server.Internal.HttpContextStreamReader`1.<MoveNext>g__MoveNextAsync|11_0(ValueTask`1 readStreamTask)
+         at MagicOnion.Server.Hubs.StreamingHubBase`2.HandleMessageAsync()
+         at MagicOnion.Server.Hubs.StreamingHubBase`2.Connect()
+         at MagicOnion.Server.Hubs.StreamingHubBase`2.Connect()
+         at MagicOnion.Server.MethodHandlerResultHelper.TaskToEmptyValueTask[T](Task`1 result)
+         at MagicOnion.Server.MethodHandler.DuplexStreamingServerMethod[TRequest,TResponse](IAsyncStreamReader`1 requestStream, IServerStreamWriter`1 responseStream, ServerCallContext context)
+         at MagicOnion.Server.Internal.MagicOnionMethodHandlerBinder`4.<>c__DisplayClass5_0.<<BindStreamingHub>b__0>d.MoveNext()
+      --- End of stack trace from previous location ---
+         at Grpc.Shared.Server.DuplexStreamingServerMethodInvoker`3.Invoke(HttpContext httpContext, ServerCallContext serverCallContext, IAsyncStreamReader`1 requestStream, IServerStreamWriter`1 responseStream)
+         at Grpc.Shared.Server.DuplexStreamingServerMethodInvoker`3.Invoke(HttpContext httpContext, ServerCallContext serverCallContext, IAsyncStreamReader`1 requestStream, IServerStreamWriter`1 responseStream)
+         at Grpc.AspNetCore.Server.Internal.CallHandlers.DuplexStreamingServerCallHandler`3.HandleCallAsyncCore(HttpContext httpContext, HttpContextServerCallContext serverCallContext)
+         at Grpc.AspNetCore.Server.Internal.CallHandlers.ServerCallHandlerBase`3.<HandleCallAsync>g__AwaitHandleCall|8_0(HttpContextServerCallContext serverCallContext, Method`2 method, Task handleCall)
